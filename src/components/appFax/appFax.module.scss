@@ -1,0 +1,283 @@
+.faq {
+    background: #fff;
+  }
+  
+  .faqbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 0;
+  }
+  
+  .label {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #17b365;
+  
+    position: relative;
+    display: inline-block;
+  
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px; // длина линии
+      height: 2px; // толщина линии
+      background-color: #17b365;
+    }
+  
+    &::before {
+      left: -45px;
+    }
+  
+    &::after {
+      right: -45px;
+    }
+  }
+  
+  .title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 144%;
+    text-align: center;
+    color: #000;
+    margin-top: 16px;
+  }
+  
+  .subtitle {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    color: #182f43;
+    margin-top: 16px;
+    margin-bottom: 52px;
+  }
+  
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 500ms;
+  
+    .item {
+      background: #fff;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: background-color 0.4s;
+  
+      &.open {
+        background: #f1f8ff;
+      }
+  
+      .header {
+        width: 100%;
+        padding: 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        color: #111;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+  
+        & span {
+          font-family: var(--font-family);
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 156%;
+          color: #182f43;
+        }
+      }
+  
+      .icon {
+        width: 22px;
+        height: 22px;
+        display: inline-block;
+        transition: transform 0.3s;
+  
+        &.down {
+          mask: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23000' d='M7 10l5 5 5-5z'/></svg>") center / contain no-repeat;
+          background-color: #333;
+        }
+  
+        &.up {
+          mask: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23000' d='M7 14l5-5 5 5z'/></svg>") center / contain no-repeat;
+          background-color: #333;
+        }
+      }
+  
+      .panel {
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+  
+        p {
+          font-family: var(--font-family);
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 160%;
+          color: #182f43;
+          padding-left: 24px;
+          padding-right: 24px;
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+  
+  /* Адаптив */
+  @media (max-width: 768px) {
+    .accordion .item .header {
+      padding: 12px 16px;
+      font-size: 15px;
+    }
+  
+    .accordion .item .panel p {
+      padding: 0 16px 12px;
+    }
+  
+    .label {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #17b365;
+    }
+  
+    .title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 20px;
+  
+      color: #000;
+    }
+  
+    .subtitle {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+  
+      color: #97999d;
+    }
+  
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      .item {
+        background: #fff;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        overflow: hidden;
+        transition: background-color 0.4s;
+  
+        &.open {
+          background: #f1f8ff;
+        }
+  
+        .header {
+          width: 100%;
+          padding: 16px 24px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 16px;
+          font-weight: 600;
+          color: #111;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+  
+          & span {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 143%;
+            color: #182f43;
+            text-align: left;
+          }
+        }
+  
+        .icon {
+          width: 22px;
+          height: 22px;
+          display: inline-block;
+          transition: transform 0.3s;
+  
+          &.down {
+            mask: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23000' d='M7 10l5 5 5-5z'/></svg>") center / contain no-repeat;
+            background-color: #333;
+          }
+  
+          &.up {
+            mask: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23000' d='M7 14l5-5 5 5z'/></svg>") center / contain no-repeat;
+            background-color: #333;
+          }
+        }
+  
+        .panel {
+          overflow: hidden;
+          transition: max-height 0.8s ease;
+          
+       
+  
+          p {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #182f43;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 16px;
+          
+          }
+        }
+      }
+    }
+    
+
+  }
+  .faq {
+    // umumiy stil
+  }
+  .accordion {
+    .item {
+      margin-bottom: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  
+    .header {
+      width: 100%;
+      background: #f4f4f4;
+      padding: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .panel {
+      padding: 16px;
+      background: #fff;
+    }
+  
+    .icon {
+      font-size: 18px;
+    }
+  }
+  

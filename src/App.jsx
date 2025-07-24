@@ -8,6 +8,8 @@ import AppCourse from './components/appCourse/appCourse'
 import AppFreeCourse from './components/appFreeCourse/appFreeCourse'
 import AppAdvantage from './components/appAdvantage/appAdvantage'
 import AppComment from './components/appComment/appComment'
+import AppFooter from './components/appFooter/appFooter'
+import AppFax from './components/appFax/appFax'
 
 function App() {
 
@@ -21,6 +23,8 @@ function App() {
     <AppFreeCourse/>
     <AppAdvantage/>
     <AppComment></AppComment>
+    <AppFax></AppFax>
+    <AppFooter></AppFooter>
     </>
   )
 }
