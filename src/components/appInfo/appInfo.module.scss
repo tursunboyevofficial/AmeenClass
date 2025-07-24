@@ -1,0 +1,122 @@
+.infoImg {
+  height: 100vh;
+  display: flex;
+  .bgImg {
+    width: 88%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+    align-self: flex-start;
+    margin-left: -25%;
+  }
+  .infoTitle {
+    flex: 1;
+    margin-left: -30%;
+    z-index: 1;
+    background: linear-gradient(to left, #000046 55%, #00004600);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 627px;
+  padding: 0 100px 0 0;
+}
+
+.heroTitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 157%;
+  letter-spacing: 0em;
+  color: var(--white);
+  // width: 627px;
+}
+.textp {
+  display: flex;
+  align-items: center;
+  gap: 0 40px;
+  color: var(--green-second);
+  span {
+    border: 2px solid var(--green-second);
+    height: 50px;
+    display: inline-block;
+    transform: rotate(-90deg);
+    margin-left: 25px;
+  }
+}
+.infoBtns {
+  display: flex;
+  gap: 23px;
+  display: flex;
+  align-items: center;
+}
+
+.btnHero {
+  border-radius: 8px;
+  padding: 14px 16px;
+  width: 184px;
+  height: 56px;
+  background: var(--white);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #010147;
+  cursor: pointer;
+  transition: 500ms;
+  &:hover {
+    background: rgba(255, 255, 255, 0.822);
+  }
+}
+.doira {
+  width: 70px;
+  height: 70px;
+  border: 2px solid #ffffffd0;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.doira1 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightText {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 133%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--white);
+}
+
+.btnRightBox {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  cursor: pointer;
+  transition: 500ms;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}

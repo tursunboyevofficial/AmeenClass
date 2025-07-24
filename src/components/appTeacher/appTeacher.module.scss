@@ -1,0 +1,80 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.ptext {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #17b365;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  span{
+      border: 1px solid #17b365;
+      display: inline-block;
+      transform: rotate(-90deg);
+    height: 20px;
+    margin: 0 20px;
+  }
+}
+.title{
+    font-family: var(--font-family);
+font-weight: 700;
+font-size: 36px;
+line-height: 144%;
+color: var(--black);
+}
+.textp{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 22px;
+color: #182f43;
+}
+.bottom{
+    gap: 32px;
+    margin-top: 40px;
+    display: flex;
+}
+.card ,.card1{
+    width: 524px;
+    height: 320px;
+    border-radius: 16px;
+    background-image: url(../../assets/images/Background1.svg);
+    display: flex;
+    align-items: end;
+    cursor: pointer;
+    transition: 300ms;
+    &:hover{
+        
+    transform: scale(1.03);
+    }
+}
+.card1{
+    background-image: url(../../assets/images/Background.svg);
+}
+
+.imgtext,.imgtext1{
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 146%;
+letter-spacing: 0.01em;
+color: var(--white);
+margin: 20px
+}
+.imgtitle{
+    font-size: 24px;
+}

@@ -1,0 +1,67 @@
+@import "../../style/_variables.scss";
+
+.wrapper {
+  padding: 16px 0;
+}
+
+.wrapperBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainBox {
+  display: flex;
+  gap: 100px;
+}
+
+.navLogo {
+  width: 103px;
+  height: 52px;
+
+}
+
+
+.logoImg {
+    width: 100%;
+}
+
+.navMain {
+  display: flex;
+  gap: 56px;
+  align-items: center;
+}
+
+.mainLink {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  color: #1a1a18;
+  cursor: pointer;
+}
+
+.btnReg {
+  border-radius: 8px;
+  padding: 14px 16px;
+  width: 166px;
+  height: 48px;
+
+  background: var(--primary);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--white);
+  cursor: pointer;
+  transition: 500ms;
+
+  &:hover {
+    background-color:#000e3f ;
+  }
+}
+
+

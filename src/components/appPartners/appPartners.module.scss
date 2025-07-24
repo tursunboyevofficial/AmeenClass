@@ -1,0 +1,92 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.textp {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #17b365;
+  display: flex;
+  align-items: center;
+  margin-top: 64px;
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 117%;
+  letter-spacing: 0.01em;
+  color: #1c1c1c;
+  margin-top: 16px;
+}
+.span {
+  border: 1px solid #17b365;
+  display: inline-block;
+  transform: rotate(-90deg);
+  height: 20px;
+  margin: 0 20px;
+}
+.arcadion {
+  display: flex;
+  gap: 83px;
+  height: 200px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 36px;
+}
+
+
+
+
+.arcadionWrapper {
+    overflow: hidden;
+    width: 100%;
+    background: #f1f5f9;
+    margin-top: 36px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .acardionImg{
+    display: flex;
+    margin: 0 40px;
+  }
+  
+  
+  .arcadion {
+    display: flex;
+    gap: 83px;
+    animation: scrollLeft 25s linear infinite;
+    align-items: center;
+  
+    // har bir logo
+    .imgbox1 {
+      flex: 0 0 auto;
+  
+      img {
+        height: 60px;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+  
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  

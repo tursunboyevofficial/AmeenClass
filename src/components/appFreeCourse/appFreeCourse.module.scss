@@ -1,0 +1,226 @@
+.section {
+    padding-top: 64px;
+    text-align: center;
+  
+    .label {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #17b365;
+  
+      position: relative;
+      display: inline-block;
+  
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px; // длина линии
+        height: 2px; // толщина линии
+        background-color: #17b365;
+      }
+  
+      &::before {
+        left: -45px;
+      }
+  
+      &::after {
+        right: -45px;
+      }
+    }
+  
+    .title {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 144%;
+      color: #000;
+      margin: 28px 0;
+    }
+  
+    .swiper {
+      padding: 0 10px 30px;
+    }
+  
+    .card {
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+      background: #fff;
+      border-radius: 8px;
+      width: 282px;
+      height: 351px;
+  
+      text-align: left;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      transition: 300ms;
+  
+      &:hover {
+        transform: translateY(-4px);
+      }
+  
+      .imageWrap {
+        position: relative;
+  
+        img {
+          width: 100%;
+          border-radius: 8px;
+        }
+  
+        .videos {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: rgba(0, 0, 0, 0.6);
+          color: #fff;
+          font-size: 15px;
+          padding: 4px 10px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-weight: 600;
+  cursor: pointer;
+          .icon {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+          }
+        }
+      }
+  
+      .courseTitle {
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 10px;
+        line-height: 1.4;
+        padding: 0 16px;
+        cursor: pointer;
+      }
+  
+      .author {
+        font-size: 13px;
+        margin-top: 4px;
+        color: #555;
+        padding: 0 16px;
+      }
+  
+      .rating {
+        font-size: 14px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0 16px;
+  
+        .stars {
+          color: #f4b400;
+          font-weight: bold;
+          padding: 0 16px;
+        }
+  
+        .review {
+          color: #333;
+          font-size: 13px;
+          padding: 0 16px;
+        }
+      }
+  
+      .btn {
+        border-radius: 4px;
+        padding: 3px 16px;
+        margin-left: 16px;
+        width: 161px;
+        height: 30px;
+        border: none;
+        background: #4caf50;
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        margin-top: 17px;
+        letter-spacing: 0.01em;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  
+    .bottom {
+      margin-top: 25px;
+  
+      .explore {
+        padding: 10px 22px;
+        border: 1px solid #333;
+        border-radius: 6px;
+        background: transparent;
+        cursor: pointer;
+        font-weight: 500;
+      }
+    }
+  
+    // Swiper arrows
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+      background:  var(--primary);
+      width: 36px;
+      height: 36px;
+      border-radius: 100%;
+      color: #ffffff;
+  
+      &:hover {
+        background: var(--primary);;
+         color: #ffffff;
+      }
+  
+      &::after {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  
+  @media (max-width: 500px) {
+    .card {
+      width: 100%;
+      max-width: 200px;
+      height: 299px;
+      margin: none;
+    }
+  
+    .swiper {
+      padding: 0;
+  
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+  
+    
+  }
+  @media (max-width: 400px) {
+    .card {
+      width: 100%;
+      max-width: 200px;
+      height: 299px;
+      margin: none;
+    }
+  
+    .swiper {
+      padding: 0;
+  
+      width: 100%;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+   
+  
+  
+    
+  }
+  

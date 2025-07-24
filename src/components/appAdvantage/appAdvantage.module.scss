@@ -1,0 +1,433 @@
+.section {
+    margin-top: 120px;
+    background: #f0f8ff;
+  }
+  
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  
+  
+  }
+  
+  .imageBox {
+    position: relative; // важно для абсолютного позиционирования плашки
+    flex: 1;
+  
+    img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+  
+    .notification {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #e6e8ec;
+      border-radius: 8px;
+      padding: 8px 16px;
+      width: 218px;
+      height: 54px;
+    }
+  
+    .logo {
+      flex-shrink: 0;
+      width: 28px;
+      height: 36px;
+      margin-right: 8px;
+  
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  
+    .text {
+      .title {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 125%;
+        color: #000;
+      }
+  
+      .subtitle {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 133%;
+        color: #000;
+      }
+    }
+  }
+  
+  .infoBox {
+    flex: 1;
+  
+    .label {
+      position: relative;
+      display: inline-block;
+      padding-left: 32px;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #17b365;
+      margin-bottom: 8px;
+  
+      position: relative;
+      display: inline-block;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px; // длина линии
+        height: 2px; // толщина линии
+        background-color: #17b365;
+      }
+  
+      &::before {
+        left: -15px;
+      }
+    }
+  
+    .title {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 36px;
+      color: #182f43;
+    }
+  
+    .text {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #182f43;
+      margin-top: 24px;
+      margin-bottom: 26px;
+    }
+  
+    .button {
+      padding: 12px 28px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 16px;
+      width: 166px;
+      height: 48px;
+      cursor: pointer;
+      transition: background 0.2s;
+  
+      &:hover {
+        background: #090c3b;
+      }
+    }
+  }
+  
+  
+  @media (max-width: 1000px) {
+  
+  
+    .wrapper {
+      padding-top: 50px;
+      padding-bottom: 50px;
+   
+    }
+  
+    .imageBox {
+      max-width: 500px;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        width: 600px;
+  
+  
+      }
+  
+      .notification {
+        position: absolute;
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: auto;
+        padding: 8px 12px;
+        gap: 8px;
+      }
+  
+      .logo {
+        width: 24px;
+        height: 24px;
+      }
+  
+      .text {
+        .title {
+          font-size: 14px;
+        }
+  
+        .subtitle {
+          font-size: 11px;
+        }
+      }
+    }
+  
+    .infoBox {
+     
+  
+      .title {
+        font-size: 26px;
+      }
+  
+      .text {
+        font-size: 15px;
+        margin-top: 16px;
+        margin-bottom: 20px;
+      }
+  
+      .button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+  
+  
+    .wrapper {
+      padding-top: 50px;
+      padding-bottom: 50px;
+   display: flex;
+   flex-direction: column;
+    }
+  
+    .imageBox {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      img {
+        width: 100%;
+  
+  
+      }
+  
+      .notification {
+        position: absolute;
+        top: auto;
+        bottom: 20px;
+        left: 70%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: auto;
+        padding: 8px 12px;
+        gap: 8px;
+      }
+  
+      .logo {
+        width: 24px;
+        height: 24px;
+      }
+  
+      .text {
+        .title {
+          font-size: 14px;
+        }
+  
+        .subtitle {
+          font-size: 11px;
+        }
+      }
+    }
+  
+    .infoBox {
+     text-align: center;
+  
+      .title {
+        font-size: 26px;
+      }
+  
+      .text {
+        font-size: 15px;
+        margin-top: 16px;
+        margin-bottom: 20px;
+      }
+  
+      .button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+  
+  @media (max-width: 500px) {
+  
+  
+    .wrapper {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      
+  
+    
+    }
+  
+  
+    .infoBox {
+      flex: 1;
+     
+  
+      .label {
+        position: relative;
+        display: inline-block;
+        padding-left: 32px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #17b365;
+        margin-bottom: 8px;
+  
+        position: relative;
+        display: inline-block;
+  
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 40px; // длина линии
+          height: 2px; // толщина линии
+          background-color: #17b365;
+        }
+  
+        &::before {
+          left: -15px;
+        }
+      }
+  
+      .title {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 125%;
+        color: #182f43;
+        text-align: left;
+      }
+  
+      .text {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+        color: #182f43;
+        text-align: left;
+      }
+  
+      .button {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 7px;
+        line-height: 143%;
+        letter-spacing: 0.01em;
+        text-align: center;
+        color: #fff;
+        border-radius: 4px;
+        padding: 7px 8px;
+        width: 90px;
+        height: 26px;
+        cursor: pointer;
+        transition: background 0.2s;
+  
+        &:hover {
+          background: #090c3b;
+        }
+      }
+    }
+  
+  
+    .imageBox {
+      position: relative; // важно для абсолютного позиционирования плашки
+      flex: 1;
+      max-width: 278px;
+      width: 100%;
+      
+  
+      img {
+        max-width: 100%;
+        
+      
+        border-radius: 12px;
+        display: block;
+       
+      }
+  
+      .notification {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: flex;
+        align-items: center;
+        background: #fff;
+  
+        border-radius: 8px;
+        padding: 8px 16px;
+        border: 0.55px solid #e6e8ec;
+        border-radius: 4px;
+        padding: 4px 8px;
+        width: 118px;
+        height: 29px;
+      }
+  
+      .logo {
+        flex-shrink: 0;
+        width: 15px;
+        height: 19px;
+        margin-right: 8px;
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+  
+      .text {
+        .title {
+          font-family: var(--font-family);
+          font-weight: 600;
+          font-size: 8px;
+          line-height: 125%;
+          color: #000;
+        }
+  
+        .subtitle {
+          font-family: var(--font-family);
+          font-weight: 500;
+          font-size: 6px;
+          line-height: 133%;
+          color: #000;
+        }
+      }
+    }
+  
+  }
