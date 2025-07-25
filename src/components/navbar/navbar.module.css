@@ -65,3 +65,10 @@
 }
 
 
+
+@media(max-width:1000px){
+  
+.navMain{
+  display: none; 
+}
+}

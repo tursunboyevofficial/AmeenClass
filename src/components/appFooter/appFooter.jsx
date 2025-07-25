@@ -14,7 +14,7 @@ export default function AppFooter() {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        {/* Верхняя часть */}
+       
         <div className={styles.top}>
           <img
             src={ameenicon}
@@ -38,7 +38,7 @@ export default function AppFooter() {
           </div>
         </div>
 
-        {/* Центральная часть */}
+        
         <div className={styles.linkBox}>
           <div className={styles.links}>
             <a onClick={() => navigate("/ustozlarimiz")}>Ustozlarimiz</a>
@@ -54,7 +54,7 @@ export default function AppFooter() {
           </div>  
         </div>
 
-        {/* Нижняя часть */}
+        
         <div className={styles.bottom}>
           <p>© 2025 Ameen uz. All rights reserved.</p>
           <div className={styles.legal}>

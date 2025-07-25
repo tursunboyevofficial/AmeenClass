@@ -35,7 +35,7 @@ const faqs = [
 ];
 
 export default function FaqSection() {
-  const [openIndex, setOpenIndex] = useState(null); // ❗ holat
+  const [openIndex, setOpenIndex] = useState(null); // holat
 
   const toggle = (index) => {
     setOpenIndex(prev => (prev === index ? null : index));
@@ -57,14 +57,14 @@ export default function FaqSection() {
               <div key={idx} className={styles.item}>
                 <button
                   className={styles.header}
-                  onClick={() => toggle(idx)} // ❗ onClick ulandi
+                  onClick={() => toggle(idx)} // onClick ulandi
                 >
                   <span>{item.question}</span>
                   <span className={styles.icon}>
                     {openIndex === idx ? '-' : '+'}
                   </span>
                 </button>
-                {openIndex === idx && ( // ❗ faqat ochilganda ko‘rsatish
+                {openIndex === idx && ( //  faqat ochilganda ko‘rsatish
                   <div className={styles.panel}>
                     <p>{item.answer}</p>
                   </div>

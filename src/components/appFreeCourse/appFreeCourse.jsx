@@ -58,7 +58,7 @@ const courses = [
     reviews: 345,
     videos: 3,
   },
-  // Можно добавить еще 3
+ 
 ];
 
 function AppFreeCourse() {

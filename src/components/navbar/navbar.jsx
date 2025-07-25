@@ -10,6 +10,8 @@ function Navbar() {
           <div className={s.wrapperBox}>
           <div className={s.mainBox}>
             <div className={s.navLogo}>
+            
+
               <img src={Logo} className={s.logoImg} alt="Ameen" />
             </div>
             <ul className={s.navMain}>

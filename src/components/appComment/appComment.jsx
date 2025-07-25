@@ -77,13 +77,13 @@ function AppComment() {
         <p className={styles.label}>FIKRLAR</p>
         <h2 className={styles.title}>O'quvchilarning fikrlari</h2>
 
-        {/* ====== ОБЁРТКА: контейнер, в который точно влезают 3 карточки ====== */}
+        
         <div className={styles.sliderWrapper}>
           <Swiper
             modules={[EffectCoverflow, Pagination]}
             effect="coverflow"
             centeredSlides={true}
-            slidesPerView= {2}            // ровно 3 карточки “на экране”
+            slidesPerView= {2}         
             loop={true}
             spaceBetween={10}      
             grabCursor={true}
@@ -93,7 +93,7 @@ function AppComment() {
               rotate: 0,
               stretch: 0,
               depth: 600,
-              modifier: 1.5,             // сближаем боковые слайды
+              modifier: 1.5,             
               slideShadows: true,
             }}
             pagination={{ clickable: false }}
@@ -122,10 +122,9 @@ function AppComment() {
             ))}
           </Swiper>
         </div>
-        {/* ================================================================ */}
-      </div>
+        </div>
 
-      {/* ======= Модальное окно с видео-слайдером ======= */}
+      
       {modalOpen && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           <div className={styles.modalBox}>
