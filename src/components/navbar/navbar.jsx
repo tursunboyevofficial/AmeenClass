@@ -1,8 +1,15 @@
+import { useState } from "react";
 import { Logo } from "../../utils/getImg";
 import s from "./navbar.module.css";
+import { AiOutlineMenu } from "react-icons/ai";
+
 
 
 function Navbar() {
+  const [isOpen,  setIsOpen] = useState(true);
+  const toggle = ()=>{
+    setIsOpen(prev => !prev)
+  }
   return (
     <>
       <div className={s.wrapper}>
@@ -10,11 +17,10 @@ function Navbar() {
           <div className={s.wrapperBox}>
           <div className={s.mainBox}>
             <div className={s.navLogo}>
-            
-
+              <div className={s.buttonmenu}><AiOutlineMenu onClick={() => toggle()} /></div>
               <img src={Logo} className={s.logoImg} alt="Ameen" />
             </div>
-            <ul className={s.navMain}>
+            <ul className={`${s.navMain} `} >
               <li className={s.mainLink}>Ustozlar</li>
               <li className={s.mainLink}>Partnerlar</li>
               <li className={s.mainLink}>To'plamalar</li>
@@ -34,6 +40,16 @@ function Navbar() {
           </div>
           </div>
         </div>
+      </div>
+      <div className={`${s.burgernav} ${isOpen ? s.navMain2 : s.navMain1}`}>
+
+      <ul className={s.navMain1}>
+              <li className={s.mainLink2}>Ustozlar</li>
+              <li className={s.mainLink2}>Partnerlar</li>
+              <li className={s.mainLink2}>To'plamalar</li>
+              <li className={s.mainLink2}>Bepul kurslar</li>
+              <li className={s.mainLink2}>Fikrlar</li>
+            </ul>
       </div>
     </>
   );

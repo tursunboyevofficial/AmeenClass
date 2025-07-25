@@ -2,16 +2,23 @@
   height: 100vh;
   display: flex;
   .bgImg {
-    width: 88%;
-    height: 100%;
-    object-fit: cover;
-    transform: scaleX(-1);
     align-self: flex-start;
-    margin-left: -25%;
+    background-image: url(../../style/imaages/Frame1.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-position: 13% 15%;
+    background-size: cover;
+    margin-right: -150px;
   }
-  .infoTitle {
+  
+}
+
+
+.infoTitle {
     flex: 1;
-    margin-left: -30%;
+    margin-left: -50%;
     z-index: 1;
     background: linear-gradient(to left, #000046 55%, #00004600);
     background-size: cover;
@@ -20,8 +27,6 @@
     align-items: center;
     justify-content: center;
   }
-}
-
 .textBox {
   display: flex;
   flex-direction: column;
@@ -118,5 +123,97 @@
 
   &:hover {
     transform: scale(1.03);
+  }
+}
+
+
+@media (max-width: 900px) {
+  .infoImg {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bgImg {
+    width: 100% !important;
+    height: 300px;
+    margin-right: 0;
+    background-position: center center;
+  }
+
+  .infoTitle {
+    z-index: 999;
+    margin-top: -220%;
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+    height: 800px;
+    text-align: center;
+    background: linear-gradient(to top, #000046ee, #00004600);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .textBox {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+    line-height: 120%;
+  }
+
+  .infoBtns {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btnHero {
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .infoImg {
+    height: 100vh;
+    display: flex;
+    .bgImg {
+      background-position: 26% 15%;
+    }
+    
+  }
+  
+  .infoTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .doira {
+    width: 50px;
+    height: 50px;
+  }
+
+  .doira1 {
+    width: 35px;
+    height: 35px;
+  }
+
+  .textp {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .textBox {
+    padding: 0 10px;
   }
 }

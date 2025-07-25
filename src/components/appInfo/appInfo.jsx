@@ -1,12 +1,12 @@
 import styles from "./appInfo.module.scss";
-import imgBg from "../../style/imaages/Frame 1.webp";
+import imgBg from "../../style/imaages/Frame1.webp";
 import { playIcon } from "../../utils/getImg";
 
 function AppInfo() {
   return (
     <div>
       <div className={styles.infoImg}>
-        <img src={imgBg} alt="bg" className={styles.bgImg} />
+        <div className={styles.bgImg}></div>
         <div className={styles.infoTitle}>
           <div className={styles.textBox}>
             <p className={styles.textp}>

@@ -6,8 +6,6 @@ function AppCourse() {
       <div className="container">
         <div className={s.box}>
           <div className={s.btn}>
-            <button className={s.btn}>1</button>
-            <button className={s.btn}>2</button>
           </div>
           <div className={s.card}>
             <div className={s.left}>

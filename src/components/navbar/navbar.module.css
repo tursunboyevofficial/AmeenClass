@@ -1,5 +1,8 @@
 @import "../../style/_variables.scss";
 
+.buttonmenu {
+  display: none;
+}
 .wrapper {
   padding: 16px 0;
 }
@@ -8,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
 }
 
 .mainBox {
@@ -18,12 +22,15 @@
 .navLogo {
   width: 103px;
   height: 52px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-left: 20px;
 }
 
-
 .logoImg {
-    width: 100%;
+  width: 100%;
 }
 
 .navMain {
@@ -60,15 +67,47 @@
   transition: 500ms;
 
   &:hover {
-    background-color:#000e3f ;
+    background-color: #000e3f;
   }
 }
 
-
-
-@media(max-width:1000px){
-  
-.navMain{
-  display: none; 
+.navMain1 {
+  display: none;
 }
+
+.navMain2 {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .container {
+    max-width: 100%;
+  }
+  .navMain1 {
+    transition: 500ms;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    flex-direction: column;
+    .mainLink2 {
+      font-weight: 600;
+      padding: 5px;
+      letter-spacing: 0.01em;
+      color: #1a1a18;
+      cursor: pointer;
+    }
+  }
+  .navMain {
+    display: none;
+  }
+  .buttonmenu {
+    display: flex;
+  }
+}
+.burgernav {
+  position: absolute;
+  background: white;
+  z-index: 100;
+  width: 100%;
+  transition: 100ms;
 }
