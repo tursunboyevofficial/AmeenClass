@@ -10,7 +10,13 @@ import {
 import { useNavigate } from "react-router-dom";
 
 export default function AppFooter() {
-
+  const scroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      console.log('scrool');
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -41,16 +47,15 @@ export default function AppFooter() {
         
         <div className={styles.linkBox}>
           <div className={styles.links}>
-            <a onClick={() => navigate("/ustozlarimiz")}>Ustozlarimiz</a>
-            <a onClick={() => navigate("/partnerlar")}>Partnerlar</a>
-            <a onClick={() => navigate("/kurslar")}>Kurslar</a>
-            <a onClick={() => navigate("/fikrlar")}>Fikrlar</a>
-            <a onClick={() => navigate("/kontaktlar")}>Kontaktlar</a>
+            <a onClick={() => scroll("appteacher")}>Ustozlarimiz</a>
+            <a onClick={() => scroll("apppartners")}>Partnerlar</a>
+            <a onClick={() => scroll("appcourse")}>Kurslar</a>
+            <a onClick={() => scroll("appcomment")}>Fikrlar</a>
           </div>
           <div className={styles.links}>
-            <a onClick={() => navigate("/join")}>Ameen.uz ga qo’shilish</a>
-            <a onClick={() => navigate("/help-center")}>Help center</a>
-            <a onClick={() => navigate("/faqs")}>FAQs</a>
+            <a onClick={() => scroll("#")}>Ameen.uz ga qo’shilish</a>
+            <a onClick={() => scroll("#")}>Help center</a>
+            <a onClick={() => scroll("appfax")}>FAQs</a>
           </div>  
         </div>
 
@@ -58,8 +63,8 @@ export default function AppFooter() {
         <div className={styles.bottom}>
           <p>© 2025 Ameen uz. All rights reserved.</p>
           <div className={styles.legal}>
-            <a onClick={() => navigate("/terms")}>Terms of Service</a>
-            <a onClick={() => navigate("/privacy")}>Privacy Policy</a>
+            <a onClick={() => navigate("#")}>Terms of Service</a>
+            <a onClick={() => navigate("#")}>Privacy Policy</a>
           </div>
         </div>
       </div>

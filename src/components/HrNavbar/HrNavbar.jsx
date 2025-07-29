@@ -1,24 +1,11 @@
 import { useState } from "react";
 import { Logo } from "../../utils/getImg";
-import s from "./navbar.module.css";
+import s from "./HrNavbar.module.scss";
 import { AiOutlineMenu } from "react-icons/ai";
 
 
 
-function Navbar() {
-  const topLogo = () => {
-    window.scrollTo({
-      top:0,
-      behavior:'smooth'
-    })
-  }
-  const scroll = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      console.log('scrool');
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+function HrNavbar() {
   const [isOpen,  setIsOpen] = useState(true);
   const toggle = ()=>{
     setIsOpen(prev => !prev)
@@ -31,14 +18,14 @@ function Navbar() {
           <div className={s.mainBox}>
             <div className={s.navLogo}>
               <div className={s.buttonmenu}><AiOutlineMenu onClick={() => toggle()} /></div>
-              <img src={Logo} className={s.logoImg} onClick={topLogo} alt="Ameen" />
+              <img src={Logo} className={s.logoImg} alt="Ameen" />
             </div>
             <ul className={`${s.navMain} `} >
-              <li className={s.mainLink} onClick={()=>scroll('appteacher')}>Ustozlar</li>
-              <li className={s.mainLink} onClick={()=>scroll('apppartners')}>Partnerlar</li>
-              <li className={s.mainLink} onClick={()=>scroll('appcourse')}>To'plamalar</li>
-              <li className={s.mainLink} onClick={()=>scroll('appfreecourse')}>Bepul kurslar</li>
-              <li className={s.mainLink} onClick={()=>scroll('appcomment')}>Fikrlar</li>
+              <li className={s.mainLink}>Kurs haqida qisqacha</li>
+              <li className={s.mainLink}>Dastur</li>
+              <li className={s.mainLink}>Ustozlar</li>
+              <li className={s.mainLink}>Tariflar</li>
+              <li className={s.mainLink}>Fikrlar</li>
             </ul>
           </div>
           <div className={s.nav_right}>
@@ -68,4 +55,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default HrNavbar;

@@ -1,30 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './components/navbar/navbar'
-import AppInfo from './components/appInfo/appInfo'
-import AppTeacher from './components/appTeacher/appTeacher'
-import AppPartners from './components/appPartners/appPartners'
-import AppCourse from './components/appCourse/appCourse'
-import AppFreeCourse from './components/appFreeCourse/appFreeCourse'
-import AppAdvantage from './components/appAdvantage/appAdvantage'
-import AppComment from './components/appComment/appComment'
-import AppFooter from './components/appFooter/appFooter'
-import AppFax from './components/appFax/appFax'
 
+import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home/Home'
+import HrPage from './pages/HrPage/HrPages'
 function App() {
 
   return (
     <>
-    <Navbar></Navbar>
-    <AppInfo></AppInfo>
-    <AppTeacher></AppTeacher>
-    <AppPartners></AppPartners>
-    <AppCourse></AppCourse>
-    <AppFreeCourse/>
-    <AppAdvantage/>
-    <AppComment></AppComment>
-    <AppFax></AppFax>
-    <AppFooter></AppFooter>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/hr" element={<HrPage />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
