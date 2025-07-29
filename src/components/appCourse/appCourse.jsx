@@ -3,7 +3,7 @@ import s from "./appCourse.module.scss";
 function AppCourse() {
   return (
     <div>
-      <div className="container">
+      <div className={`container ${s.contain}`}>
         <div className={s.box}>
           <div className={s.btn}>
           </div>

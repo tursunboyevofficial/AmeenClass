@@ -3,7 +3,7 @@ import s from "./hrCours.module.scss";
 function AppTeacher() {
   return (
     <div>
-      <div className="container">
+      <div className={`container ${s.contain}`}>
         <div className={s.box}>
           <div className={s.top}>
             <p className={s.ptext}>

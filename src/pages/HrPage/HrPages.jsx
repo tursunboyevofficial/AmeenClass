@@ -11,14 +11,28 @@ import HrNavbar from '../../components/HrNavbar/HrNavbar'
 function HrPages() {
   return (
     <>
-        <HrNavbar/>
+        <HrNavbar id="navbar"/>
+        <section id="course">
         <HrCourse/>
+        </section>
+        <section id="freeday">
         <FreeDay/>
+        </section>
+        <section id="cours">
         <HrCours/>
+        </section>
+        <section id="partner">
         <AppPartner/>
+        </section>
+        <section id="tarif">
         <Tarif/>
+        </section>
+        <section id="comment">
         <AppComment/>
+        </section>
+        <section id="footer">
         <AppFooter/>
+        </section>
     </>
   )
 }

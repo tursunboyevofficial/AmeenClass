@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Logo } from "../../utils/getImg";
 import s from "./navbar.module.css";
 import { AiOutlineMenu } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -22,6 +23,10 @@ function Navbar() {
   const [isOpen,  setIsOpen] = useState(true);
   const toggle = ()=>{
     setIsOpen(prev => !prev)
+  }
+  const navigate = useNavigate();
+  const sendPage = () => {
+    navigate('/login')
   }
   return (
     <>
@@ -47,7 +52,7 @@ function Navbar() {
                 <option value="">RU</option>
                 <option value="">Eng</option>
             </select> */}
-            <button className={s.btnReg} type="submit">
+            <button className={s.btnReg} onClick={sendPage} type="submit">
               Ro'yxatdan o'tish
             </button>
           </div>

@@ -1,7 +1,12 @@
 import s from "./hsCourse.module.scss";
 import { playIcon } from "../../utils/getImg";
+import { useNavigate } from "react-router-dom";
 
 function hrCourse() {
+  const navigate = useNavigate();
+  const sendPage = () => {
+    navigate('/login')
+  }
   return (
     <>
       <div className={s.box}>
@@ -11,7 +16,7 @@ function hrCourse() {
               <p className={s.ptext}><span className={s.span_title}></span>HR KURSI</p>
               <h1 className={s.title}>Kompaniyada uchraydigan muammolarga HR beradigan yechimlar</h1>
               <p className={s.textp}>HR professional kurslarining barcha qismlarini bitta to‘plamda, ancha qulayroq narxda harid qiling va qo‘shimcha sovg‘alarga ega bo‘ling!</p>
-              <button className={s.button1}>Ro'yxatdan o'tish</button>
+              <button className={s.button1} onClick={sendPage}>Ro'yxatdan o'tish</button>
             </div>
             <div className={s.right}>
                 <div className={s.img_box}>

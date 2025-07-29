@@ -1,8 +1,13 @@
 import styles from "./appInfo.module.scss";
 import imgBg from "../../style/imaages/Frame1.webp";
 import { playIcon } from "../../utils/getImg";
+import { useNavigate } from "react-router-dom";
 
 function AppInfo() {
+  const navigate = useNavigate();
+  const sendPage = () => {
+    navigate('/login')
+  }
   return (
     <div>
       <div className={styles.infoImg}>
@@ -16,7 +21,7 @@ function AppInfo() {
               Eng yaxshilaridan ta’lim olish endi yanada oson
             </h1>
             <div className={styles.infoBtns}>
-              <button className={styles.btnHero}>Ro'yxatdan o'tish</button>
+              <button className={styles.btnHero} onClick={sendPage}>Ro'yxatdan o'tish</button>
               <div className={styles.btnRightBox}>
                 <div className={styles.doira}>
                   <div className={styles.doira1}>
