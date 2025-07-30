@@ -1,5 +1,5 @@
 @import './fonts';
-@import './variables';
+@import './_variables.css';
 
 * {
     margin: 0;
@@ -31,10 +31,29 @@ ul {
 button {
     border: none;
 }
+p,a,span,button,li,label{
+    font-family: var(--font-roboto)!important;
+}
+h1,h2{
+    font-size: 36px!important;
+}
 @media(max-width:1000px){
     .container {
         width: 100%;
         margin: 0 auto;
         padding: 0 15px;
+    }
+}
+@media(max-width:450px){
+    h1, h2{
+        font-size: 22px!important;
+        font-family:var(--font-poppins)!important;
+    }
+    p,a,span{
+        font-size: 14px!important;
+        font-family: var(--font-roboto)!important;
+    }
+    button,li{
+        font-family: var(--font-roboto)!important;
     }
 }

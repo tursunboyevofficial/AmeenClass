@@ -17,9 +17,9 @@ function AppInfo() {
             <p className={styles.textp}>
               <span></span>HR MANAGEMENT, PROJECT MANAGEMENT
             </p>
-            <h1 className={styles.heroTitle}>
+            <h className={styles.heroTitle}>
               Eng yaxshilaridan ta’lim olish endi yanada oson
-            </h1>
+            </h>
             <div className={styles.infoBtns}>
               <button className={styles.btnHero} onClick={sendPage}>Ro'yxatdan o'tish</button>
               <div className={styles.btnRightBox}>

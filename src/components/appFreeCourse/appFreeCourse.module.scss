@@ -217,10 +217,22 @@
       margin-left: 10px;
       margin-right: 10px;
     }
-  
-   
+    .swiperSlideActive{
+      display: flex!important;
+      justify-content: center!important;
+    }
+    
+    
+    
   
   
     
   }
+  :global {
+    .swiper-slide {
+      
+      display: flex!important;
+      justify-content: center!important;
   
+    }
+  }

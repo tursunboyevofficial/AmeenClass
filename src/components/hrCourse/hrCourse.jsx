@@ -1,4 +1,4 @@
-import s from "./hsCourse.module.scss";
+import s from "./hrCourse.module.scss";
 import { playIcon } from "../../utils/getImg";
 import { useNavigate } from "react-router-dom";
 

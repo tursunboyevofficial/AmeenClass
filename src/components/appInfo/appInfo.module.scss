@@ -217,3 +217,21 @@
     padding: 0 10px;
   }
 }
+@media (max-width: 450px) {
+  .textp{
+    margin-top: 50px;
+    font-size: 14px;
+    padding: 0 5px;
+    span{
+      display: none;
+      
+    }
+    
+  }
+  .heroTitle{
+    margin: 20px 0;
+  }
+  .btnHero{
+    margin-bottom: 20px;
+  }
+}

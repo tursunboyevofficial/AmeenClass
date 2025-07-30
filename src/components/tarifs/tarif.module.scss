@@ -31,6 +31,13 @@
   color: #1c1c1c;
   margin-top: 16px;
 }
+.span {
+  border: 1px solid #17b365;
+  display: inline-block;
+  transform: rotate(-90deg);
+  height: 20px;
+  margin: 0 20px;
+}
 
 
 
@@ -45,10 +52,12 @@
     text-align: center;
   
     .subtitle {
-      color: #00b386;
+      color: #17b365;
       font-weight: 600;
       text-transform: uppercase;
       font-size: 18px;
+      display: flex;
+      justify-content: center;
     }
   
     .title {
@@ -107,7 +116,7 @@
             content: '✔';
             position: absolute;
             left: 0;
-            color: #00b386;
+            color: #17b365;
           }
   
           &.inactive {
@@ -137,4 +146,8 @@
       }
     }
   }
-  
+  @media(width:430px){
+    .tariff_section{
+      margin-bottom: -100px;
+    }
+  }

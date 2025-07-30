@@ -1,4 +1,4 @@
-@import '../../style/variables';
+@import '../../style/_variables.css';
 .box{
     padding-top: 50px;
 }
@@ -6,7 +6,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding:0 0 20px 0;
+}
+.title{
+    padding: 0  50px 0 0 ;
 }
 .left{
     display: flex;
@@ -14,6 +17,7 @@
     align-items: start;
     padding: 30px;
     gap: 20px;
+    padding-top: 0;
 }
 .ptext{
     display: flex;
@@ -128,4 +132,45 @@
   &:hover {
     background-color: #000e3f;
   }
+}
+
+@media (width:430px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+    .img_section1{
+        width: 100px;
+        height: 150px;
+    }
+    .img_section2{
+        width: 210px;
+        height: 210px;
+    }
+    .img_section3{
+        width: 100px;
+        height: 150px;
+    }
+    .img_section4{
+        width: 210px;
+        height: 210px;
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+        padding: 30px 0 ;
+        h1{
+            text-align: center;
+        }
+    }
+    .span_title{
+        display: none;
+    }
+    .ptext{
+        margin-left: 0;
+    }
+    .title{
+        padding-right: 0;
+    }
 }

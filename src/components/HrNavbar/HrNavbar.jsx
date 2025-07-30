@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 function HrNavbar() {
   const [isOpen,  setIsOpen] = useState(true);
   const toggle = ()=>{
+    console.log('log prev');
     setIsOpen(prev => !prev)
   }
   const navigate = useNavigate();
@@ -65,11 +66,11 @@ function HrNavbar() {
       <div className={`${s.burgernav} ${isOpen ? s.navMain2 : s.navMain1}`}>
 
       <ul className={s.navMain1}>
-              <li className={s.mainLink2}>Ustozlar</li>
-              <li className={s.mainLink2}>Partnerlar</li>
-              <li className={s.mainLink2}>To'plamalar</li>
-              <li className={s.mainLink2}>Bepul kurslar</li>
-              <li className={s.mainLink2}>Fikrlar</li>
+              <li className={s.mainLink2} onClick={()=>scroll('course')}>Kurs haqida qisqacha</li>
+              <li className={s.mainLink2} onClick={()=>scroll('freeday')}>Dastur</li>
+              <li className={s.mainLink2} onClick={()=>scroll('cours')}>To'Ustozlar</li>
+              <li className={s.mainLink2} onClick={()=>scroll('tarif')}>Tariflar</li>
+              <li className={s.mainLink2} onClick={()=>scroll('comment')}>Fikrlar</li>
             </ul>
       </div>
     </>

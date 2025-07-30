@@ -1,4 +1,4 @@
-@import "../../style/_variables.scss";
+@import "../../style/fonts.scss";
 
 .buttonmenu {
   display: none;
@@ -111,7 +111,7 @@
   }
 }
 .burgernav {
-  position: absolute;
+  position: fixed;
   background: white;
   z-index: 100;
   width: 100%;

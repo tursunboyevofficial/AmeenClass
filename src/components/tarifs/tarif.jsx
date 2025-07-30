@@ -52,7 +52,7 @@ const tariffs = [
   export default function tarif() {
     return (
       <section className={s.tariff_section}>
-        <h2 className={s.subtitle}>TARIFLAR</h2>
+        <p className={s.subtitle}><span className={s.span}></span>TARIFLAR<span className={s.span}></span></p>
         <h1 className={s.title}>Tariflar va narxlar</h1>
         <div className={s.tariff_container}>
           {tariffs.map((plan, index) => (
