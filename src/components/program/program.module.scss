@@ -59,6 +59,9 @@ font-weight: 600;
 font-size: 24px;
 letter-spacing: -0.01em;
 color: #808080;
+display: flex;
+align-items: center;
+gap: 10px;
 
       }
     
@@ -174,6 +177,7 @@ letter-spacing: -0.01em;
 color: #808080;border-radius: 16px;
 padding: 4px 16px;
 height: 32px;background: #f1f5f9;
+gap: 5px;
     }
   }
 
@@ -280,6 +284,11 @@ color: #1d1d1f;
   .card{
     &Meta {
       font-size: 8px!important;
+      span{
+        font-size: 10px!important;
+        display: flex;
+        align-items: center;
+      }
     }
   }
   }

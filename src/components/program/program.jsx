@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import styles from "./program.module.scss";
 import { useNavigate } from "react-router-dom";
+import {library,Vectorkurs,Vector,icon} from '../../utils/getImg'
 
 const programData = [
   {
@@ -87,7 +88,6 @@ const programData = [
 
 export default function Program() {
   const [activeIndex, setActiveIndex] = useState(null);
-
   const navigate = useNavigate();
   const sendPage = () => {
     navigate("/register");
@@ -105,15 +105,14 @@ export default function Program() {
         <div className={styles.boxes}>
         <p className={styles.label}><span className={styles.spans}> </span>Dastur</p>
         <h3 className={styles.title}>O‘quv dastur</h3>
-        <p className={styles.info}>📄 12 dars</p>
-        <p className={styles.info}>📄 80 % kurs — amaliyot</p>
+        <p className={styles.info}><img src={Vectorkurs} alt="Vectorkurs" /> 12 dars</p>
+        <p className={styles.info}><img src={Vector} alt="Vector" /> 80 % kurs — amaliyot</p>
         <button className={styles.btn} onClick={sendPage}>Ro‘yxatdan o‘tish</button>
         </div>
       </div>
       <span className={styles.spanmain}></span>
       {/* O‘ng tomon */}
       <div className={styles.right}>
-      {/* <div className={styles.maska}></div> */}
         {programData.map((item, index) => (
           <div key={index} className={styles.card}>
             <div
@@ -123,8 +122,8 @@ export default function Program() {
               <div>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <div className={styles.cardMeta}>
-                  <span>🗓 {item.weeks}</span>
-                  <span>▶ {item.lessons}</span>
+                  <span><img src={icon} alt="icon" /> {item.weeks}</span>
+                  <span><img src={library} alt="library" /> {item.lessons}</span>
                 </div>
               </div>
               <div className={styles.icon}>
@@ -134,7 +133,7 @@ export default function Program() {
             {activeIndex === index && (
               <div className={styles.cardContent}>
                 {item.contents.map((text, i) => (
-                  <p key={i}>{` ${i+1} ${text}`}</p>
+                  <p key={i}>{` ${i+1} ${text}`}</p> 
                 ))}
               </div>
             )}
