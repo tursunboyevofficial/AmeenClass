@@ -177,7 +177,16 @@
     width: 100%;
   }
 }
-
+@media(max-Width:600px){
+  .infoImg {
+    height: 100vh;
+    display: flex;
+    .bgImg {
+      background-position: 26% 15%;
+    }
+    
+  }
+}
 @media (max-width: 430px) {
   .infoImg {
     height: 100vh;

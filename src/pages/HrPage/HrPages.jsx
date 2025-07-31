@@ -7,6 +7,7 @@ import AppPartner from '../../components/appPartners/appPartners'
 import AppComment from '../../components/appComment/appComment'
 import AppFooter from '../../components/appFooter/appFooter'
 import HrNavbar from '../../components/HrNavbar/HrNavbar'
+import TrainingProgram from '../../components/program/program'
 
 function HrPages() {
   return (
@@ -17,6 +18,9 @@ function HrPages() {
         </section>
         <section id="freeday">
         <FreeDay/>
+        </section>
+        <section id="program">
+        <TrainingProgram/>
         </section>
         <section id="cours">
         <HrCours/>
