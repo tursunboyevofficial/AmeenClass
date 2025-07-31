@@ -76,6 +76,9 @@ padding: 14px 16px;
 width: 166px;
 height: 48px;
 background: var(--primary);
+&:hover {
+  background-color: #000e3f;
+}
       }
     }
   

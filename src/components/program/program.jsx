@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import styles from "./program.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const programData = [
   {
@@ -87,6 +88,10 @@ const programData = [
 export default function Program() {
   const [activeIndex, setActiveIndex] = useState(null);
 
+  const navigate = useNavigate();
+  const sendPage = () => {
+    navigate("/register");
+  };
   const toggleIndex = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -102,7 +107,7 @@ export default function Program() {
         <h3 className={styles.title}>O‘quv dastur</h3>
         <p className={styles.info}>📄 12 dars</p>
         <p className={styles.info}>📄 80 % kurs — amaliyot</p>
-        <button className={styles.btn}>Ro‘yxatdan o‘tish</button>
+        <button className={styles.btn} onClick={sendPage}>Ro‘yxatdan o‘tish</button>
         </div>
       </div>
       <span className={styles.spanmain}></span>
