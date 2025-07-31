@@ -8,6 +8,7 @@ import AppComment from '../../components/appComment/appComment'
 import AppFooter from '../../components/appFooter/appFooter'
 import HrNavbar from '../../components/HrNavbar/HrNavbar'
 import TrainingProgram from '../../components/program/program'
+import AppTeacher from '../../components/appTeacher/appTeacher'
 
 function HrPages() {
   return (
@@ -23,7 +24,7 @@ function HrPages() {
         <TrainingProgram/>
         </section>
         <section id="cours">
-        <HrCours/>
+        <AppTeacher/>
         </section>
         <section id="partner">
         <AppPartner/>

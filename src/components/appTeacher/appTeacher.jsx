@@ -1,5 +1,6 @@
 import s from "./appTeacher.module.scss";
 import { useNavigate } from "react-router-dom";
+import { award } from "../../utils/getImg";
 
 function AppTeacher() {
   const navigate = useNavigate();
@@ -22,17 +23,16 @@ function AppTeacher() {
             <div onClick={handClick} className={s.card}>
               <p className={s.imgtext1}>
                 <span className={s.imgtitle}>
-                  Kozimxon To‘rayev Kozimxon To‘rayev{" "}
+                  Kozimxon To‘rayev<img src={award} alt="Logo" />
                 </span>
-                👨‍🏫 O‘qituvchi Hammuallif Jahongir Imomnazarov Jahongir
-                Imomnazarov 👨‍🏫 Islom Moliyasi
+                O‘qituvchi Hammuallif 
               </p>
             </div>
             <div className={s.card1}>
               <div className={s.parda}></div>
-              <div className={s.imgtext}>
-                <p className={s.ptextp}><span className={s.imgtitle}>Jahongir Imomnazarov</span> 👨‍🏫
-                Islom Moliyasi PARTNERS</p>
+              <div className={s.imgtext2}>
+                <p className={s.ptextp2}><span className={s.imgtitle2}>Jahongir Imomnazarov<img src={award} alt="Logo" /> </span>
+                <span className={s.title3}>Islom Moliyasi PARTNERS</span></p>
               </div>
             </div>
           </div>

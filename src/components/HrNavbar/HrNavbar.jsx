@@ -1,9 +1,8 @@
 import { use, useState } from "react";
 import { Logo } from "../../utils/getImg";
 import s from "./HrNavbar.module.scss";
-import { AiOutlineMenu } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
-
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 
 
 function HrNavbar() {
@@ -29,7 +28,9 @@ function HrNavbar() {
       section.scrollIntoView({ 
         top:elementPosition,
         behavior: 'smooth'
+        
        });
+       setIsOpen(prev => !prev)
     }
   };
   return (
@@ -39,7 +40,7 @@ function HrNavbar() {
           <div className={s.wrapperBox}>
           <div className={s.mainBox}>
             <div className={s.navLogo}>
-              <div className={s.buttonmenu}><AiOutlineMenu onClick={() => toggle()} /></div>
+              <div className={s.buttonmenu} onClick={() => toggle()} > {!isOpen ?  <XMarkIcon style={{ width: 24, height: 24, color: 'black' }} /> : <Bars3Icon style={{ width: 24, height: 24, color: 'black' }} />}</div>
               <img src={Logo} onClick={topLogo} className={s.logoImg} alt="Ameen" />
             </div>
             <ul className={`${s.navMain} `} >

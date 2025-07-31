@@ -1,3 +1,4 @@
+@import'../../style/_variables.css';
 .infoImg {
   height: 100vh;
   display: flex;
@@ -164,8 +165,12 @@
   }
 
   .heroTitle {
-    font-size: 28px;
-    line-height: 120%;
+    font-family: var(--font-family);
+font-weight: 700;
+font-size: 56px;
+line-height: 157%;
+letter-spacing: 0em;
+color: var(--white);
   }
 
   .infoBtns {

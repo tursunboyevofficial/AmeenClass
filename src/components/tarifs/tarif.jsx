@@ -56,7 +56,9 @@ const tariffs = [
 
 export default function Tarif() {
   return (
-    <section className={s.tariff_section}>
+    <>
+      <div className="container">
+      <section className={s.tariff_section}>
       <p className={s.subtitle}>
         <span className={s.span}></span>TARIFLAR<span className={s.span}></span>
       </p>
@@ -95,5 +97,7 @@ export default function Tarif() {
         ))}
       </Swiper>
     </section>
+      </div>
+    </>
   );
 }
